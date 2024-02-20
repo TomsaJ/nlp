@@ -22,3 +22,5 @@ rasa run actions
 dann ersten den Bot starten:
 
 rasa shell
+
+Bei Änderung Model neu trainieren oder rasa run action stoppen und neu ausführen
