@@ -8,6 +8,14 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - informieren_wetter
+
+entities:
+  - stadt
+  - wetter
+
+actions:
+  - action_frage_wetter
 
 responses:
   utter_greet:
@@ -29,6 +37,20 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_ask_wetter:
+    - text: "Moment, ich überprüfe das Wetter für {stadt}..."
+
+  utter_antworte_wetter:
+    - text: "Das Wetter in {stadt} ist {wetter}."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+slots:
+  wetter:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: wetter

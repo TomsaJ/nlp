@@ -10,5 +10,15 @@ laed trainiertes model
 
 rasa shell
 
+rasa run
 
 https://rasa.com/docs/rasa/command-line-interface
+
+
+Den Action Server in einem seperaten Temrinal starte:
+
+rasa run actions
+
+dann ersten den Bot starten:
+
+rasa shell

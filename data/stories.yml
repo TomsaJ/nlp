@@ -1,7 +1,6 @@
 version: "3.1"
 
 stories:
-
 - story: happy path
   steps:
   - intent: greet
@@ -28,3 +27,12 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: User fragt nach dem Wetter in einer Stadt
+  steps:
+    - intent: informieren_wetter
+    - action: action_frage_wetter
+    - action: utter_ask_wetter
+    - intent: informieren_wetter
+    - action: action_frage_wetter
+    - action: utter_antworte_wetter

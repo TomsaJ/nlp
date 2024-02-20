@@ -4,14 +4,14 @@ nlu:
 - intent: greet
   examples: |
     - hey
-    - hello
+    - hallo
     - hi
-    - hello there
-    - good morning
-    - good evening
+    - hallo du
+    - guten morgen
+    - guten abend
     - moin
     - hey there
-    - let's go
+    - Auf geht's
     - hey dude
     - goodmorning
     - goodevening
@@ -29,6 +29,9 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - tschüss
+    - Auf Wiedersehen
+    - Bis dann
 
 - intent: affirm
   examples: |
@@ -89,3 +92,23 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: informieren_wetter
+  examples: |
+    - Wie ist das Wetter in [Berlin](stadt)?
+    - Wie wird das Wetter in [München](stadt) morgen sein?
+
+
+- intent: affirm
+  examples: |
+    - Ja
+    - Ja, bitte
+    - Sicher
+    - Okay
+
+- intent: deny
+  examples: |
+    - Nein
+    - Nein danke
+    - Nicht wirklich
+    - Ich bin nicht interessiert
