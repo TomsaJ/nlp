@@ -1,114 +1,27 @@
-version: "3.1"
+version: "2.0"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hallo
-    - hi
-    - hallo du
-    - guten morgen
-    - guten abend
-    - moin
-    - hey there
-    - Auf geht's
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - Hallo
+      - Hi
+      - Guten Tag
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - tschüss
-    - Auf Wiedersehen
-    - Bis dann
+  - intent: goodbye
+    examples: |
+      - Tschüss
+      - Auf Wiedersehen
+      - Bis später
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: weather_query
+    examples: |
+      - Wie ist das Wetter?
+      - Kannst du mir das Wetter sagen?
+      - Was ist das Wetter heute?
+      - Gibt es Regen?
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
-- intent: informieren_wetter
-  examples: |
-    - Wie ist das Wetter in [Berlin](stadt)?
-    - Wie wird das Wetter in [München](stadt) morgen sein?
-
-
-- intent: affirm
-  examples: |
-    - Ja
-    - Ja, bitte
-    - Sicher
-    - Okay
-
-- intent: deny
-  examples: |
-    - Nein
-    - Nein danke
-    - Nicht wirklich
-    - Ich bin nicht interessiert
+  - intent: inform
+    examples: |
+      - In [Berlin](city) regnet es
+      - Das Wetter in [New York](city) ist sonnig
+      - Wie ist das Wetter in [London](city)?
