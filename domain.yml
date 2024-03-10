@@ -1,56 +1,30 @@
-version: "3.1"
+version: "2.0"
 
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - informieren_wetter
+  - weather_query
+  - inform
 
 entities:
-  - stadt
-  - wetter
-
-actions:
-  - action_frage_wetter
+  - city
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "Hallo! Wie kann ich Ihnen helfen?"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Auf Wiedersehen!"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_ask_city:
+    - text: "Für welche Stadt möchten Sie das Wetter erfahren?"
 
-  utter_ask_wetter:
-    - text: "Moment, ich überprüfe das Wetter für {stadt}..."
-
-  utter_antworte_wetter:
-    - text: "Das Wetter in {stadt} ist {wetter}."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_get_weather
 
 slots:
-  wetter:
+  city:
     type: text
-    influence_conversation: false
     mappings:
       - type: from_entity
-        entity: wetter
+        entity: city
