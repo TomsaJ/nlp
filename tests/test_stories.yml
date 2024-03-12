@@ -1,91 +1,67 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
+version: "2.0"
+
 stories:
-- story: happy path 1
+- story: erfolgreiche Wetteranfrage mit direkter Stadtangabe
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      Wie ist das Wetter in Berlin?
+    intent: inform
+    entities:
+    - city: "Berlin"
+  - action: action_get_weather
+  - action: utter_wetter_detail
 
-- story: happy path 2
+- story: Wetteranfrage initiieren und Stadt nach Aufforderung nennen
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      Kannst du mir das Wetter sagen?
+    intent: weather_query
+  - action: utter_ask_city
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      In Berlin
+    intent: inform
+    entities:
+    - city: "Berlin"
+  - action: action_get_weather
+  - action: utter_wetter_detail
 
-- story: sad path 1
+- story: Wetteranfrage mit unbekannter Stadt
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
+      Wie ist das Wetter in Fantasia?
+    intent: inform
+    entities:
+    - city: "Fantasia"
+  - action: action_get_weather
+  - action: utter_city_not_found
 
-- story: sad path 2
+- story: Benutzer bricht Wetteranfrage ab
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      Was ist das Wetter heute?
+    intent: weather_query
+  - action: utter_ask_city
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
+      Egal, vergiss es.
     intent: deny
-  - action: utter_goodbye
+  - action: utter_acknowledge
 
-- story: sad path 3
+- story: Mehrfachanfragen in einer Sitzung
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
+      Wetter in München?
+    intent: inform
+    entities:
+    - city: "München"
+  - action: action_get_weather
+  - action: utter_wetter_detail
   - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      Und wie sieht's in Hamburg aus?
+    intent: inform
+    entities:
+    - city: "Hamburg"
+  - action: action_get_weather
+  - action: utter_wetter_detail
