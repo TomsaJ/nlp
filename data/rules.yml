@@ -1,0 +1,18 @@
+version: "2.0"
+
+rules:
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Start conversation
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Weather query with city specified
+    steps:
+      - intent: weather_query
+      - action: utter_ask_city
+      - active_loop: action_get_weather

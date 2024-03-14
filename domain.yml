@@ -1,0 +1,30 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - weather_query
+  - inform
+
+entities:
+  - city
+
+responses:
+  utter_greet:
+    - text: "Hallo! Wie kann ich Ihnen helfen?"
+
+  utter_goodbye:
+    - text: "Auf Wiedersehen!"
+
+  utter_ask_city:
+    - text: "Für welche Stadt möchten Sie das Wetter erfahren?"
+
+actions:
+  - action_get_weather
+
+slots:
+  city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city

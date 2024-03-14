@@ -1,0 +1,124 @@
+version: '2.0'
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hallo
+      - Hi
+      - Guten Tag
+
+  - intent: goodbye
+    examples: |
+      - Tschüss
+      - Auf Wiedersehen
+      - Bis später
+
+  - intent: weather_query
+    examples: |
+      - Wie ist das Wetter?
+      - Kannst du mir das Wetter sagen?
+      - Was ist das Wetter heute?
+
+  - intent: inform
+    examples: |
+      - Wie ist das Wetter in [Mainz](city)?
+      - Wie ist das Wetter in [Dessau-Roßlau](city)?
+      - Wie ist das Wetter in [Krefeld](city)?
+      - Wie ist das Wetter in [Freiburg im Breisgau](city)?
+      - Wie ist das Wetter in [Schwerin](city)?
+      - Wie ist das Wetter in [Halle (Saale)](city)?
+      - Kannst du mir sagen, wie das Wetter in [Neumünster](city)?
+      - Kannst du mir sagen, wie das Wetter in [Augsburg](city)?
+      - Wie ist das Wetter in [Siegen](city)?
+      - Wie ist das Wetter in [Cottbus](city)?
+      - Wie ist das Wetter in [Wiesbaden](city)?
+      - Wie ist das Wetter in [Hamburg](city)?
+      - Kannst du mir sagen, wie das Wetter in [Bremen](city)?
+      - Wie ist das Wetter in [Potsdam](city)?
+      - Wie ist das Wetter in [Leverkusen](city)?
+      - Wie ist das Wetter in [Trier](city)?
+      - Wie ist das Wetter in [Mönchengladbach](city)?
+      - Wie ist das Wetter in [Erfurt](city)?
+      - Wie ist das Wetter in [Herne](city)?
+      - Wie ist das Wetter in [Bergisch Gladbach](city)?
+      - Wie ist das Wetter in [Reutlingen](city)?
+      - Wie ist das Wetter in [Pforzheim](city)?
+      - Wie ist das Wetter in [Salzgitter](city)?
+      - Wie ist das Wetter in [Bottrop](city)?
+      - Wie ist das Wetter in [Konstanz](city)?
+      - Kannst du mir sagen, wie das Wetter in [Iserlohn](city)?
+      - Wie ist das Wetter in [Offenbach am Main](city)?
+      - Kannst du mir sagen, wie das Wetter in [Mannheim](city)?
+      - Wie ist das Wetter in [Paderborn](city)?
+      - Wie ist das Wetter in [Leipzig](city)?
+      - Wie ist das Wetter in [Ratingen](city)?
+      - Wie ist das Wetter in [Berlin](city)?
+      - Kannst du mir sagen, wie das Wetter in [Gelsenkirchen](city)?
+      - Wie ist das Wetter in [Chemnitz](city)?
+      - Kannst du mir sagen, wie das Wetter in [Tübingen](city)?
+      - Wie ist das Wetter in [Bonn](city)?
+      - Wie ist das Wetter in [Stuttgart](city)?
+      - Wie ist das Wetter in [Düsseldorf](city)?
+      - Kannst du mir sagen, wie das Wetter in [Köln](city)?
+      - Wie ist das Wetter in [Neuss](city)?
+      - Wie ist das Wetter in [Karlsruhe](city)?
+      - Wie ist das Wetter in [Minden](city)?
+      - Wie ist das Wetter in [Bochum](city)?
+      - Wie ist das Wetter in [Jena](city)?
+      - Wie ist das Wetter in [Magdeburg](city)?
+      - Kannst du mir sagen, wie das Wetter in [Aachen](city)?
+      - Kannst du mir sagen, wie das Wetter in [Darmstadt](city)?
+      - Kannst du mir sagen, wie das Wetter in [Osnabrück](city)?
+      - Wie ist das Wetter in [Ludwigshafen am Rhein](city)?
+      - Kannst du mir sagen, wie das Wetter in [Rostock](city)?
+      - Wie ist das Wetter in [Wolfsburg](city)?
+      - Kannst du mir sagen, wie das Wetter in [Moers](city)?
+      - Wie ist das Wetter in [Marl](city)?
+      - Kannst du mir sagen, wie das Wetter in [Worms](city)?
+      - Wie ist das Wetter in [Regensburg](city)?
+      - Wie ist das Wetter in [Witten](city)?
+      - Kannst du mir sagen, wie das Wetter in [Erlangen](city)?
+      - Kannst du mir sagen, wie das Wetter in [Ingolstadt](city)?
+      - Wie ist das Wetter in [Esslingen am Neckar](city)?
+      - Wie ist das Wetter in [Fürth](city)?
+      - Kannst du mir sagen, wie das Wetter in [Hagen](city)?
+      - Wie ist das Wetter in [Solingen](city)?
+      - Wie ist das Wetter in [Oberhausen](city)?
+      - Wie ist das Wetter in [Velbert](city)?
+      - Kannst du mir sagen, wie das Wetter in [Wuppertal](city)?
+      - Wie ist das Wetter in [Lübeck](city)?
+      - Wie ist das Wetter in [Zwickau](city)?
+      - Kannst du mir sagen, wie das Wetter in [Saarbrücken](city)?
+      - Kannst du mir sagen, wie das Wetter in [Wilhelmshaven](city)?
+      - Wie ist das Wetter in [Heilbronn](city)?
+      - Wie ist das Wetter in [Hannover](city)?
+      - Kannst du mir sagen, wie das Wetter in [Hildesheim](city)?
+      - Wie ist das Wetter in [Nürnberg](city)?
+      - Wie ist das Wetter in [Bremerhaven](city)?
+      - Wie ist das Wetter in [Dortmund](city)?
+      - Wie ist das Wetter in [Braunschweig](city)?
+      - Wie ist das Wetter in [Koblenz](city)?
+      - Wie ist das Wetter in [Würzburg](city)?
+      - Kannst du mir sagen, wie das Wetter in [Villingen-Schwenningen](city)?
+      - Wie ist das Wetter in [Hamm](city)?
+      - Wie ist das Wetter in [Recklinghausen](city)?
+      - Wie ist das Wetter in [Mülheim an der Ruhr](city)?
+      - Wie ist das Wetter in [Bielefeld](city)?
+      - Wie ist das Wetter in [Dresden](city)?
+      - Kannst du mir sagen, wie das Wetter in [Dorsten](city)?
+      - Kannst du mir sagen, wie das Wetter in [Lünen](city)?
+      - Kannst du mir sagen, wie das Wetter in [Kiel](city)?
+      - Wie ist das Wetter in [Frankfurt am Main](city)?
+      - Wie ist das Wetter in [Heidelberg](city)?
+      - Wie ist das Wetter in [Münster](city)?
+      - Wie ist das Wetter in [Duisburg](city)?
+      - Wie ist das Wetter in [Gütersloh](city)?
+      - Wie ist das Wetter in [Remscheid](city)?
+      - Kannst du mir sagen, wie das Wetter in [Ulm](city)?
+      - Wie ist das Wetter in [Oldenburg](city)?
+      - Wie ist das Wetter in [Kassel](city)?
+      - Wie ist das Wetter in [Gera](city)?
+      - Wie ist das Wetter in [München](city)?
+      - Kannst du mir sagen, wie das Wetter in [Göttingen](city)?
+      - Kannst du mir sagen, wie das Wetter in [Essen](city)?
+
