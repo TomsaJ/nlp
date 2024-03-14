@@ -1,7 +1,8 @@
-version: "2.0"
+version: '2.0'
 
 stories:
-  - story: happy path
+
+  - story: Weather query with specified city - Berlin
     steps:
       - intent: greet
       - action: utter_greet
@@ -14,7 +15,54 @@ stories:
       - intent: goodbye
       - action: utter_goodbye
 
-  - story: say goodbye
+  - story: Weather query with specified city - Hamburg
     steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: weather_query
+      - action: utter_ask_city
+      - intent: inform
+        entities:
+          - city: "Hamburg"
+      - action: action_get_weather
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Weather query with specified city - München
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: weather_query
+      - action: utter_ask_city
+      - intent: inform
+        entities:
+          - city: "München"
+      - action: action_get_weather
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Weather query with specified city - Köln
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: weather_query
+      - action: utter_ask_city
+      - intent: inform
+        entities:
+          - city: "Köln"
+      - action: action_get_weather
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Weather query with specified city - Frankfurt
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: weather_query
+      - action: utter_ask_city
+      - intent: inform
+        entities:
+          - city: "Frankfurt"
+      - action: action_get_weather
       - intent: goodbye
       - action: utter_goodbye
